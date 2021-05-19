@@ -7,8 +7,8 @@ const socketBuilder = new SocketBuilder({
 })
 
 const socket = socketBuilder
-    .setOnUserConnected(() => console.log('user connected!', user))
-    .setOnUserDisconnected(() => console.log('user disconnectd!', user))
+    .setOnUserConnected((user) => console.log('user connected!', user))
+    .setOnUserDisconnected((user) => console.log('user disconnectd!', user))
     .build()
 
 const room = {
