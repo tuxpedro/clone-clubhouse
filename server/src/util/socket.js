@@ -26,14 +26,14 @@ export default class SocketServer {
         })
 
         // teste para validar o front-end
-        const room = this.#io.of('/room')
-        room.on('connection', socket => {
-            socket.emit('userConnection', 'socket id se conectou ' + socket.id)
+        // const room = this.#io.of('/room')
+        // room.on('connection', socket => {
+        //     socket.emit('userConnection', 'socket id se conectou ' + socket.id)
 
-            socket.on('joinRoom', (dados) => {
-                console.log('data recived', dados)
-            })
-        })
+        //     socket.on('joinRoom', (dados) => {
+        //         console.log('data recived', dados)
+        //     })
+        // })
 
         return new Promise((resolve, reject) => {
             server.on('error', reject)
